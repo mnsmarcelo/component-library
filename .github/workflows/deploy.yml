@@ -16,3 +16,13 @@ jobs:
       - run: yarn install
       - run: yarn build
       - run: yarn build-as-lib
+
+        name: Deploying Storybook to Amazon S3
+      - uses: keithweaver/aws-s3-github-action@v1.0.0
+        with:
+          command: cp
+          source: ./storybook-static
+          destination: s3://mnsmarcelo-component-library/
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_region: us-east-2
