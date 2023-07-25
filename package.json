@@ -15,7 +15,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "init-msw": "msw init public/",
-    "buildLib": "rollup -c"
+    "build-as-lib": "rollup -c"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^6.0.3",
