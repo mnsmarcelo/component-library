@@ -1,4 +1,4 @@
-# [🪩 Storyboob static](http://mnsmarcelo-component-library.s3-website.us-east-2.amazonaws.com/) 
+# [🪩 Storybook static](http://mnsmarcelo-component-library.s3-website.us-east-2.amazonaws.com/) 
 
 ## [**🌎 marcelosousa.tech**](https://marcelosousa.tech/)
 
