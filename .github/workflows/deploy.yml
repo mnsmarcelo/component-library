@@ -15,7 +15,6 @@ jobs:
       - run: npm install -g yarn
       - run: yarn install
       - run: yarn build-storybook
-      - run: yarn build-as-lib
       - uses: keithweaver/aws-s3-github-action@v1.0.0
         name: Deploying Storybook to Amazon S3
         with:
