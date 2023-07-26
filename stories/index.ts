@@ -1,3 +1,13 @@
-import { Button, ButtonProps } from './Button/Button';
+import {
+    Button,
+    ButtonProps,
+    Input,
+    InputProps
+} from '@chakra-ui/react';
 
-export { Button , ButtonProps };
+export {
+    Button,
+    ButtonProps,
+    Input,
+    InputProps
+};

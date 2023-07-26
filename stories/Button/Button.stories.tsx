@@ -1,37 +1,32 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { Meta, StoryObj ,ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
 
-export default {
-    title: 'Example/Button',
+const meta: Meta<typeof Button> = {
     component: Button,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof Button>;
+}
 
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
+export default meta;
+type Story = StoryObj<typeof Button>;
 
-export const Primary = Template.bind({});
-Primary.args = {
-    primary: true,
-    label: 'Button',
-};
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-    label: 'Button',
-};
+export const Primary: Story = {
+    render: () => <Button label="Button" primary={true}/>
+}
 
-export const Large = Template.bind({});
-Large.args = {
-    size: 'large',
-    label: 'Button',
-};
+export const Secondary: Story = {
+    render: () => <Button label="Button" />
+}
 
-export const Small = Template.bind({});
-Small.args = {
-    size: 'small',
-    label: 'Button',
-};
+export const Small: Story = {
+    render: () => <Button label="Button" size="small" />
+}
+
+export const Medium: Story = {
+    render: () => <Button label="Button" size="medium" />
+}
+
+export const Large: Story = {
+    render: () => <Button label="Button" size="large" />
+}
