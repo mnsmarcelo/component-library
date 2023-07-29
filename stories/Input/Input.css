@@ -1,0 +1,30 @@
+.input-wrapper {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.input-label {
+  display: block;
+  font-family: inherit;
+  margin-bottom: .5rem;
+}
+
+.input {
+    width: auto;
+    border-radius: 6px;
+    border-color: rgb(226, 232, 240);
+    border-width: 1px;
+    border-style: solid;
+    font-size: 16px;
+    height: 2rem;
+    padding: 0 .5rem;
+}
+
+.input-with-error {
+    border-color:#ff4400;
+}
+
+
+.input-error-helper {
+    color: #ff4400;
+    margin-top: .5rem;
+}
