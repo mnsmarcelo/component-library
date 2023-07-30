@@ -15,7 +15,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install -g yarn
       - run: yarn install
-      - run: yarn build-storybook
+      - run: yarn build-as-lib
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
