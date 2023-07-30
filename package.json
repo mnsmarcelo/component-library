@@ -1,6 +1,6 @@
 {
   "name": "@mnsmarcelo/component-library",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Starter componeets library with Storybook",
   "main": "dist/index.js",
   "type": "module",
