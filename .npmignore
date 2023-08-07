@@ -4,3 +4,4 @@ src
 stories
 storybook-static/*
 .idea/*
+.github/*
