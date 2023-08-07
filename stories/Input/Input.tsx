@@ -1,44 +1,47 @@
-import React, { FC, forwardRef, InputHTMLAttributes} from 'react';
-import './Input.css';
+/* eslint-disable react/jsx-props-no-spreading */
+import React, { forwardRef, InputHTMLAttributes } from 'react';
 
 type FieldError = {
-    message?: string;
-}
+  message?: string;
+};
 
 export type InputProps = {
-    name: string;
-    label: string;
-    error?: FieldError,
-    type: 'text' | 'email' | 'password' | 'textarea';
-} & InputHTMLAttributes<HTMLInputElement>
+  name: string;
+  label: string;
+  error?: FieldError,
+  type: 'text' | 'email' | 'password' | 'textarea';
+} & InputHTMLAttributes<HTMLInputElement>;
 
-export const Input: FC<InputProps> = forwardRef(({
+export const Input = forwardRef<HTMLInputElement, InputProps>((props: InputProps, ref) => {
+  const {
+    error,
     label,
     name,
     type,
-    error,
-    ...props
-}) => {
-    const withError = error?.message ? 'Input-with-error' : '';
-    return (
-        <div className="input-wrapper">
-            <label
-                className="input-label"
-                htmlFor={name}>
-                {label}
-            </label>
-            <input
-                id={name}
-                name={name}
-                type={type}
-                className={['input', withError].join(' ')}
-                {...props}
-            />
-            {error && (
-                <div className="input-error-helper">
-                    {error?.message}
-                </div>
-            )}
+    ...inputProps
+  } = props;
+  const withError = error?.message ? 'Input-with-error' : '';
+  return (
+    <div className="input-wrapper">
+      <label
+        className="input-label"
+        htmlFor={name}
+      >
+        {label}
+      </label>
+      <input
+        id={name}
+        name={name}
+        type={type}
+        className={['input', withError].join(' ')}
+        {...inputProps}
+        ref={ref}
+      />
+      {error && (
+        <div className="input-error-helper">
+          {error?.message}
         </div>
-    );
+      )}
+    </div>
+  );
 });
